@@ -74,7 +74,7 @@ def detect_bursts(data, threshold=2):
                     'duration': bursts[i - 1] - burst_start
                 })
                 burst_start = bursts[i]
-        # Add last burst
+       
         burst_events.append({
             'start': burst_start,
             'end': bursts[-1],
