@@ -121,7 +121,7 @@ def detect_patterns(data, threshold=3):
     corr_matrix = data.corr()
     high_corr = np.where(np.abs(corr_matrix) > 0.7)
     for i, j in zip(*high_corr):
-        if i < j:  # Avoid duplicate pairs
+        if i < j:  
             patterns['correlations'].append({
                 'channels': (data.columns[i], data.columns[j]),
                 'correlation': corr_matrix.iloc[i, j]
